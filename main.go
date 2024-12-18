@@ -28,6 +28,9 @@ type Feedback struct {
 
 func main() {
 	http.HandleFunc("/feedback", feedbackHandler)
+	http.HandleFunc("/feedback/test", func(w http.ResponseWriter, r *http.Request) {
+		w.Write([]byte("Hello test feedback"))
+	})
 
 	fmt.Println("Сервер запущен на порту 8000...")
 

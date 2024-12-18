@@ -62,7 +62,7 @@ func sendMail(to []string, subject, body string) error {
 }
 
 func feedbackHandler(w http.ResponseWriter, r *http.Request) {
-
+	log.Fatal("feedbackHandler")
 	w.Header().Set("Access-Control-Allow-Origin", "https://lawyer-pi.vercel.app")
 	w.Header().Set("Access-Control-Allow-Origin", "http://localhost:3001")
 	w.Header().Set("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
